@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="student" class="xiaojie.cool.pojo.Student">
+        <property name="name" value="胡图图"></property>
+        <property name="address" ref="address"></property>
+        <property name="books">
+            <array>
+                <value>西游记</value>
+                <value>红楼梦</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+        <property name="hobby">
+            <list>
+                <value>爬山</value>
+                <value>爬山</value>
+                <value>爬山</value>
+                <value>爬山</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="美好事物" value="房东的猫"></entry>
+                <entry key="冬眠" value="司南"></entry>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>lol</value>
+                <value>sss</value>
+                <value>ddd</value>
+            </set>
+        </property>
+        <property name="wife" ><null>></null></property>
+        <property name="info">
+            <props>
+                <prop key="学号">20210231</prop>
+                <prop key="性别">男</prop>
+                <prop key="姓名">胡图图</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="address" class="xiaojie.cool.pojo.Address">
+        <property name="address" value="翻斗大街翻斗花园二号楼1001室。"></property>
+    </bean>
+
+    <bean id="user" class="xiaojie.cool.pojo.User" ></bean>
+</beans>
